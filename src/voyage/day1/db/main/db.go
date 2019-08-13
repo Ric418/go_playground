@@ -19,6 +19,22 @@ func insert(com string, db *sql.DB) {
 	ins.Exec(d, com)
 }
 
+func show(db *sql.DB){
+	
+}
+
+//type ResponseWriter{
+//
+//}
+//
+//type Report struct {
+//
+//}
+//
+//type Handler interface {
+//	ServeHTTP(ResponseWriter, *Request)
+//}
+
 func main() {
 	flag.Parse()
 	com := flag.Arg(0)
@@ -29,4 +45,5 @@ func main() {
 	//fmt.Println(reflect.TypeOf(db))
 	//fmt.Printf("db = %+v\n", db.Stats())
 	insert(com, db)
+	show(db)
 }
